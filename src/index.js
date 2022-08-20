@@ -1,17 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import * as React from 'react';
+import ReactDom from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'; // npm install react-router-dom로 설치한 것을 사용하겠다고 선언 
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ReactDom.render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
+    document.querySelector('#root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
