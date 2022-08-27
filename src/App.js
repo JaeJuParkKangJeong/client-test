@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import Matching from './pages/Mathcing';
-import Editor from './pages/Editor';
-
-import RouteTest from './RouteTest';
+import Matching from './pages/Matching';
+import Guide from './pages/Guide';
+import Navbar from './components/Navbar';
 
 /*
  라이브러리의 BrowserRouter, Routes, Route 컴포넌트를 사용해 
@@ -16,12 +15,12 @@ import RouteTest from './RouteTest';
 
 function App() {
   return (
-    <div className="App">
-      <RouteTest/>
+    <div className='app'>
+      <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/Matching' element={<Matching/>}/>
-        <Route path='/Editor' element={<Editor/>}/>
+        <Route path='/Guide' element={<Guide/>}/>
       </Routes>
     </div>
   );
